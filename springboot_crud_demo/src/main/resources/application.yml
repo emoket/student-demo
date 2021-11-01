@@ -1,0 +1,19 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: student-app
+  datasource:
+    url: jdbc:mariadb://localhost:3306/demo?useSSL=false
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+  type-aliases-package: lxp.crud.domain
+
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: /Users/emoket/Desktop/give-it-a-shot/student-demo/springboot_crud_demo/log
